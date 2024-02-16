@@ -2,9 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Kinobilletter</title>
 </head>
 <body>
+
+<form id="billettStruktur">
+
+    <h1>Bestilling av kinobilletter</h1>
+
+    <label for="film">Velg film:</label>
+    <select id="film" name="film">
+        <option value="">Velg en film</option>
+        <option value="film1">Past lives</option>
+        <option value="film2">Kung Fu Panda 4</option>
+        <option value="film3">Maze Runner</option>
+    </select>
+    <br><br>
+
+    <label for="antall">Antall billetter:</label>
+    <input type="number" id="antall" name="antall" min="1" required>
+    <br><br>
+
+    <label for="fornavn">Fornavn:</label>
+    <input type="text" id="fornavn" name="fornavn" required>
+    <br><br>
+
+    <label for="etternavn">Etternavn:</label>
+    <input type="text" id="etternavn" name="etternavn" required>
+    <br><br>
+
+    <label for="epost">E-post:</label>
+    <input type="text" id="epost" name="epost" required>
+    <br><br>
+
+    <label for="telefonNummer">Telefonnummer:</label>
+    <input type="text" id="telefonNummer" name="telefonNummer" required>
+    <br><br>
+
+    <h2>Alle billetter<h2>
+
+
 
 </body>
 </html>
