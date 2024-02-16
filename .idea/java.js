@@ -1,37 +1,63 @@
-let billetter = []; //lagre en array for billetter
+
+// Lage en Array for å lagre inputverdiene fra brukeren
+let billetter = [];
+
 function kjøpBilletter() {
 
-    let form = document.getElementById('billettStruktur');
+    let film = document.getElementById("film").value;
+    let fornavn = document.getElementById("fornavn").value;
+    let etternavn = document.getElementById("etternavn").value;
+    let epost = document.getElementById('epost').value;
+    let telefonnr = document.getElementById('telefonnr').value;
+    let antall = document.getElementById("antall").value;
 
-    let fornavn = document.getElementById("fornavn");
-    let etternavn = document.getElementById("etternavn");
-    let epost = document.getElementById('epost');
-    let telefonnr = document.getElementById('telefonnr');
-    let antall = document.getElementById("antall");
+    if (fornavn === "" || etternavn === "" || telefonnr === "" || epost === "" || antall === "") {
+        alert("Alle felt må fylles ut");
+        return;
 
-    let telefonnrRegex = document.getElementById("telefonnrRegex");
-    let epostRegex = document.getElementById("epostRegex");
+    } else if (!antall <= 0) {
+        alert("Skriv inn antall billetter")
+        return;
 
+    } else if (!epostRedex(epost)) {
+        alert("Skriv inn mailen din riktig")
+        return;
 
-    if (!gyldigEpost(epost.value)) {
-        epostError.textContent = 'Vennligst skriv inn en gyldig e-postadresse.';
-        gyldigVerdi = false;
-    } else {
-        epostError.textContent = '';
+    } else if (!telefonnrRedex(telefonnr)) {
+        alert("Skriv inn telefonnummeret riktig")
+        return;
+
     }
 
-    if (!gyldigTelefonnummer(telefonnr.value)) {
-        telefonnrError.textContent = 'Vennligst skriv inn et gyldig telefonnummer.';
-        gyldigVerdi = false;
-    } else {
-        telefonnrError.textContent = '';
+    billetter.push({
+        fornavn: fornavn,
+        etternavn: etternavn,
+        epost: epost,
+        telefonnr: telefonnr,
+        film: film
+    });
+
+
     }
 
-    if (!gyldigVerdi) {
-        event.preventDefault();
-    }
+function visBilletter() {
+
+}
+function epostRedex (epost){
+    const gyldigEpost = /\S+@\S+\.\S+/;
+    return gyldigEpost.test(epost);
 }
 
+function telefonnrRedex (telefonnr) {
+    const gyldigTelefonnummer = /^\d{8}$/;
+    return gyldigTelefonnummer.test(telefonnr);
+}
+
+//Lager en funksjon for å kunne slette arrayet/billetlista
 function slettAlleBilletter () {
 
+
 }
+
+
+
