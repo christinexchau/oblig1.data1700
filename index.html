@@ -5,45 +5,41 @@
     <title>Kinobilletter</title>
 </head>
 <body>
+<h1>Bestilling av kinobilletter</h1>
 
-<form id="billettStruktur">
+<label for="film">Velg film:</label>
+<select id="film">
+    <option value="Film 1">Film 1</option>
+    <option value="Film 2">Film 2</option>
+    <option value="Film 3">Film 3</option>
+</select>
+<br><br>
 
-    <h1>Bestilling av kinobilletter</h1>
+<label for="antall">Antall billetter:</label>
+<input type="number" id="antall">
+<br><br>
 
-    <label for="film">Velg film:</label>
-    <select id="film" name="film">
-        <option value="">Velg en film</option>
-        <option value="film1">Past lives</option>
-        <option value="film2">Kung Fu Panda 4</option>
-        <option value="film3">Maze Runner</option>
-    </select>
-    <br><br>
+<label for="fornavn">Fornavn:</label>
+<input type="text" id="fornavn">
+<br><br>
 
-    <label for="antall">Antall billetter:</label>
-    <input type="number" id="antall" name="antall" min="1">
-    <br><br>
+<label for="etternavn">Etternavn:</label>
+<input type="text" id="etternavn">
+<br><br>
 
-    <label for="fornavn">Fornavn:</label>
-    <input type="text" id="fornavn" name="fornavn">
-    <br><br>
+<label for="email">E-postadresse:</label>
+<input type="email" id="email">
+<br><br>
 
-    <label for="etternavn">Etternavn:</label>
-    <input type="text" id="etternavn" name="etternavn">
-    <br><br>
+<label for="telefon">Telefonnummer:</label>
+<input type="tel" id="telefon">
+<br><br>
 
-    <label for="epost">E-post:</label>
-    <input type="text" id="epost" name="epost">
-    <br><br>
+<button onclick = "kjopBillett()">Kjøp billetter</button>
 
-    <label for="telefonNummer">Telefonnummer:</label>
-    <input type="text" id="telefonNummer" name="telefonNummer">
-    <br><br>
+<h2>Alle billetter</h2>
 
-    <button value = "Kjøp billett" onclick = "kjøpBilletter()">Kjøp billett</button>
-
-    <h2>Alle billetter</h2>
-
-    <button value = "slett billetter" onclick = "slettAlleBilletter()">Slett alle billetter</button>
+<button onclick = "slettAlleBilletter()">Slett alle billetter</button>
 
 </body>
 </html>
