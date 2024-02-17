@@ -9,22 +9,23 @@ let billetter = [];
     let film = document.getElementById("film").value;
     let antall = document.getElementById("antall").value;
 
+    //Bruker if-setninger for å kunne sjekke om alle verdiene er skrevet riktig
     if (navn === "" || epost === "" || telefon === "") {
         alert("Vennligst fyll ut alle feltene korrekt.");
         return;
     }
 
-    else if (!epostRegex(epost)) {
+    if (!epostRegex(epost)) {
         alert("Vennligst skriv inn mailen din riktig");
         return;
     }
 
-    else if(!telefonRegex(telefon)) {
+    if(!telefonRegex(telefon)) {
         alert("Vennligst skriv inn et gyldig telefonnummer");
         return;
     }
 
-    else if (antall <= 0) {
+    if (antall <= 0) {
         alert("Vennligst fyll inn antall billetter");
         return;
     }
@@ -38,6 +39,7 @@ let billetter = [];
         antall: antall
     };
 
+    // Pusher alle inputene inn i Arrayet (BillettLista)
     billetter.push(infoBillett);
 
     document.getElementById('fornavn').value = "";
@@ -51,25 +53,30 @@ let billetter = [];
 
 function visBilletter() {
     const billettListe = document.getElementById('billettListe');
-    billettListe.innerHTML = '';
+    billettListe.innerHTML = '';''
+
     for (let i = 0; i < billett.length; i++) {
         const billett = billett[i];
         const li = document.createElement('li');
-        li.textContent = `Navn: ${billett.fornavn}, E-post: ${billett.epost}, Telefonnummer: ${billett.telefon}`;
+        li.textContent = `Fornavn: ${billett.fornavn} ${billett.etternavn}, Telefon: ${billett.telefon}, Epost ${billett.epost}, Film:${billett.film}, Antall: ${billett.antall}`;
         billettListe.appendChild(li);
     }
 }
 
     function slettAlleBilletter() {
-        billetter = []; // Tømmer arrayet
-        visBilletter(); // Oppdaterer billettlisten
+        billetter = []; //Sletter inputene i Arrayet slik at den blir tom
+        visBilletter();
     }
 
+
+    //Funksjonen for validering av epost
     function epostRegex(epost) {
         const gyldigEpost = /\S+@\S+\.\S+/;
         return gyldigEpost.test(epost);
     }
 
+
+    //Funksjonen for validering av telefon
     function telefonRegex(telefon) {
         const gyldigTelefon = /^\d{8}$/;
         return gyldigTelefon.test(telefon);
