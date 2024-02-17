@@ -29,17 +29,24 @@ let billetter = [];
         return;
     }
 
-    billetter.push ({fornavn: fornavn, etternavn: etternavn, epost: epost,
-        telefon: telefon, film: film, antall: antall });
+    const infoBillett = {
+        fornavn: fornavn,
+        etternavn: etternavn,
+        epost: epost,
+        telefon: telefon,
+        film: film,
+        antall: antall
+    };
 
-    visBilletter();
-    document.getElementById('fornavn').value = '';
+    billetter.push(infoBillett);
+
+    document.getElementById('fornavn').value = "";
     document.getElementById("etternavn").value = "";
-    document.getElementById('email').value = '';
-    document.getElementById('telefon').value = '';
-    document.getElementById('antall').value = '';
+    document.getElementById('email').value = "";
+    document.getElementById('telefon').value = "";
+    document.getElementById('antall').value = "";
     document.getElementById("film").value = "";
-}
+    visBilletter();}
 
 
 function visBilletter() {
