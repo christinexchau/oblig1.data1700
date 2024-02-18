@@ -1,4 +1,8 @@
 /*
+
+//Tok hele denne siden på kommentar
+// Buttons funket ikke da jeg hadde en egen javascript fil
+
 let billetter = [];
 
 //Lager funksjonen for kjøpBillett
