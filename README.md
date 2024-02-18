@@ -10,7 +10,7 @@ Fullt navn: Christine Ngoc Tran
 This program is a ticket registration system designed to facilitate the purchase of 
 tickets for various movies. Users can input their first name, last name, email, 
 phone number, select a movie from a dropdown menu, and specify the quantity of 
-tickets they wish to purchase.
+tickets they wish to buy.
 
 The inputs are validated to ensure that all required fields are filled out correctly
 before a ticket purchase is processed. Upon submission, the ticket information is 
