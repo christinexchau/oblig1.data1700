@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kinobilletter</title>
+    <title>Kinobilletter - oblig1</title>
 </head>
 <body>
-<h1>Bestilling av kinobilletter (oblig1)</h1>
+<h1>Bestilling av kinobilletter</h1>
 
 <label for="film">Velg film:</label>
 <select id="film">
@@ -100,7 +100,7 @@
         for (let i = 0; i < billetter.length; i++) {
             const billett = billetter[i];
             const li = document.createElement('li');
-            li.textContent = `Navn: ${billett.fornavn} ${billett.etternavn}, E-post: ${billett.epost},
+            li.textContent = `Navn: ${billett.fornavn} ${billett.etternavn}, Epost: ${billett.epost},
             Telefonnummer: ${billett.telefon}, Film: ${billett.film}, Antall billetter: ${billett.antall}`;
             billettListe.appendChild(li);
         }

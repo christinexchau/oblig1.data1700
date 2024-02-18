@@ -1,8 +1,9 @@
 /*
 
-//Tok hele denne siden på kommentar
-// Buttons funket ikke da jeg hadde en egen javascript fil
+//Skrev inn denne siden som kommentar
+// Buttons funket ikke da jeg skrev i egen javascript-fil
 
+//Lager en Array for inputene for billetten
 let billetter = [];
 
 //Lager funksjonen for kjøpBillett
@@ -57,7 +58,7 @@ function visBilletter() {
     for (let i = 0; i < billetter.length; i++) {
         const billett = billetter[i];
         const li = document.createElement('li');
-        li.textContent = `Navn: ${billett.fornavn} ${billett.etternavn}, E-post: ${billett.epost},
+        li.textContent = `Navn: ${billett.fornavn} ${billett.etternavn}, Epost: ${billett.epost},
             Telefonnummer: ${billett.telefon}, Film: ${billett.film}, Antall billetter: ${billett.antall}`;
         billettListe.appendChild(li);
     }
@@ -90,5 +91,4 @@ function tomInput () {
     document.getElementById("antall").value = "";
     document.getElementById("film").value = "";
 }
-
  */
