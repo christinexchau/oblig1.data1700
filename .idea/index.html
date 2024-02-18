@@ -10,8 +10,9 @@
 <label for="film">Velg film:</label>
 <select id="film">
     <option value="The Boy and the Heron">The Boy and the Heron</option>
-    <option value="Verden verste menneske">Verdens verste menneske</option>
+    <option value="Prinsesse Mononoke">Prinsesse Mononoke</option>
     <option value="Past Lives">Past Lives</option>
+    <option value="Pitch Perfect">Pitch Perfect</option>
 </select>
 <br><br>
 
@@ -63,7 +64,7 @@
             return;
         }
 
-        //Valdering for epost
+        //Validering for epost
         if (!gyldigEpost(epost)) {
             alert("Skriv inn en gyldig e-postadresse.");
             return;
@@ -75,13 +76,7 @@
             return;
         }
 
-        //Validering for antall billetter
-        if (antall <= 0) {
-            alert("Vennligst fyll inn et gyldig antall billetter.");
-            return;
-        }
-
-        //Lagde en const variabel for at inputene ikke skal endres
+        //Lagde en const variabel for inputene
         const infoBillett = {
             fornavn: fornavn,
             etternavn: etternavn,
