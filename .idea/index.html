@@ -5,7 +5,7 @@
     <title>Kinobilletter</title>
 </head>
 <body>
-<h1>Bestilling av kinobilletter</h1>
+<h1>Bestilling av kinobilletter (oblig1)</h1>
 
 <label for="film">Velg film:</label>
 <select id="film">
@@ -38,6 +38,7 @@
 <button onclick = "kjopBillett()">Kjøp billetter</button>
 
 <h2>Alle billetter</h2>
+<ul id="billettListe"></ul>
 
 <button onclick = "slettAlleBilletter()">Slett alle billetter</button>
 
@@ -58,12 +59,12 @@
         }
 
         if (!gyldigEpost(epost)) {
-            alert("Vennligst skriv inn et gyldig e-postadresse.");
+            alert("Skriv inn en gyldig e-postadresse.");
             return;
         }
 
         if (!gyldigTelefon(telefon)) {
-            alert("Vennligst skriv inn et gyldig telefonnummer.");
+            alert("Skriv inn et gyldig telefonnummer.");
             return;
         }
 
@@ -84,7 +85,6 @@
         billetter.push(infoBillett);
         visBilletter();
         tomInput();
-
     }
 
     function visBilletter() {
@@ -94,7 +94,8 @@
         for (let i = 0; i < billetter.length; i++) {
             const billett = billetter[i];
             const li = document.createElement('li');
-            li.textContent = `Navn: ${billett.fornavn} ${billett.etternavn}, E-post: ${billett.epost}, Telefonnummer: ${billett.telefon}, Film: ${billett.film}, Antall: ${billett.antall}`;
+            li.textContent = `Navn: ${billett.fornavn} ${billett.etternavn}, E-post: ${billett.epost},
+            Telefonnummer: ${billett.telefon}, Film: ${billett.film}, Antall billetter: ${billett.antall}`;
             billettListe.appendChild(li);
         }
     }
