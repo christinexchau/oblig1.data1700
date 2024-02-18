@@ -1,7 +1,7 @@
 /*
 
 //Skrev inn denne siden som kommentar
-// Buttons funket ikke da jeg skrev i egen javascript-fil
+// Buttons fungerer ikke da jeg skrev i egen javascript-fil
 
 //Lager en Array for inputene for billetten
 let billetter = [];

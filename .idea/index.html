@@ -48,7 +48,7 @@
     //Lager en Array for inputene for billetten
     let billetter = [];
 
-    //Lager funksjonen for kjøpBillett
+    //Lager en funksjon for kjøpBillett-knappen
     function kjopBillett() {
         let fornavn = document.getElementById("fornavn").value;
         let etternavn = document.getElementById("etternavn").value;
@@ -86,7 +86,7 @@
             antall: antall
         }
 
-        //inforBilletten blir pusha/lagt inn i Arrayet
+        //infoBilletten blir pusha/lagt inn i Arrayet
         billetter.push(infoBillett);
         visBilletter();
         tomInput();
